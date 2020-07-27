@@ -1,0 +1,16 @@
+version: 1.0.0
+template:
+  engine: handlebars
+  path: "."
+  extension: ".boiler"
+data:
+postGenerate: npm install
+helpText:
+  - "Inside that directory, you can run several commands:\n"
+  - '  {{ color "npm start" "cyan" }}'
+  - "    Starts the development server.\n"
+  - '  {{ color "npm run build" "cyan" }}'
+  - "    Bundles the app into static files for production.\n"
+  - "We suggest that you begin by typing:\n"
+  - '  {{ color "cd" "cyan" }} $APP_REL_PATH'
+  - '  {{ color "npm start" "cyan" }}'
