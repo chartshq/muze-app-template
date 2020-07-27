@@ -1,6 +1,6 @@
 # muze-app-template
 
-A [Boilerplato](https://github.com/boilerplato/boilerplato) template for [`Muzejs`](https://github.com/chartshq/muze).
+A [Boilerplato](https://github.com/boilerplato/boilerplato) template for a simple app using [`Muzejs`](https://github.com/chartshq/muze).
 
 ## Usage
 
