@@ -4,6 +4,11 @@ template:
   path: "."
   extension: ".boiler"
 data:
+  - name: package_name
+    type: string
+    message: "Enter your app package name:"
+    required: false
+    defaultValue: $APP_NAME
 postGenerate: npm install
 helpText:
   - "Inside that directory, you can run several commands:\n"

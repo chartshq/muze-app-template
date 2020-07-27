@@ -1,5 +1,5 @@
 {
-  "name": "{{{ appName }}}",
+  "name": "{{{ package_name }}}",
   "version": "1.0.0",
   "description": "A simple app using the charting library Muzejs",
   "scripts": {
