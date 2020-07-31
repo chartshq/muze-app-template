@@ -37,8 +37,7 @@ module.exports = {
         // Provide your node_modules path where @chartshq/muze
         // package is installed.
         from: path.resolve('./node_modules', '@chartshq/muze/dist'),
-        to: 'examples/',
-        ignore: ['*.DS_Store'],
+        to: 'examples/'
       },
     ]),
   ],

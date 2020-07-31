@@ -3,7 +3,7 @@ import '@chartshq/muze/dist/muze.css';
 
 // As the muze and DataModel are asynchronous, so we need to
 // use async-await syntax.
-(async () => {
+async function myAsyncFn() {
   // Load the DataModel module.
   const DataModel = await muze.DataModel.onReady();
 
@@ -17,12 +17,6 @@ import '@chartshq/muze/dist/muze.css';
   // Create a new DataModel instance with
   // the formatted data.
   let dm = new DataModel(formattedData);
-  dm = dm.groupBy(['Origin'], [
-    {
-      field: 'Acceleration',
-      aggn: DataModel.AggregationFunctions.AVG,
-    },
-  ]);
 
   // Create a global environment to share common configs across charts.
   const env = await muze();
@@ -33,9 +27,12 @@ import '@chartshq/muze/dist/muze.css';
 
   canvas
     .data(dm) // Set data to the chart.
-    .rows(['Acceleration']) // Fields drawn on Y axis.
-    .columns(['Origin']) // Fields drawn on X axis.
-    .width(600)
-    .height(500)
-    .mount('#chart'); // Specify an element to mount on using a CSS selector.
-})().catch(console.error.bind(console));
+    .rows(["Horsepower"]) // Fields drawn on Y axis.
+    .columns(["Origin"]) // Fields drawn on X axis.
+    .width(500)
+    .height(400)
+    .mount("#chart"); // Specify an element to mount on using a CSS selector.
+}
+
+myAsyncFn()
+  .catch(console.error.bind(console));
